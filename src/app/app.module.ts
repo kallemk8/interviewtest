@@ -7,12 +7,14 @@ import { AppService } from './app.service';
 import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { BlankComponent } from './blank/blank.component';
+import { SingleComponent } from './home/single/single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BlankComponent
+    BlankComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,

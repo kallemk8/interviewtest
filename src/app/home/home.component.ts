@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   numberofpages = 0;
   searchvalue:string;
   pages = [];
+  type = "0";
   errormessage:string;
   constructor(private service: AppService){}
   ngOnInit(){
@@ -27,9 +28,9 @@ export class HomeComponent implements OnInit {
       }, (error) => { console.log(error); }
     );
   }
-  onchangemoviename(name){
+  onchangemoviename(name, type){
     this.errormessage = "";
-    this.service.getlistbysearch(name).subscribe(
+    this.service.getlistbysearch(name, this.type).subscribe(
       (response: Response) => {
           var result = response.json();
           if(result.Response==='True'){

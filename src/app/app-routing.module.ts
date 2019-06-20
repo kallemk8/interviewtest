@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BlankComponent } from './blank/blank.component';
 import { AppComponent } from './app.component';
+import { SingleComponent } from './home/single/single.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'Searchmovie', component: HomeComponent },
+    { path: 'movie/:id', component: SingleComponent },
     { path: 'blank', component: BlankComponent },
     { path: '', component:AppComponent },
 ];

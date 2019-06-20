@@ -1,9 +1,20 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-4">
         <input type="text" [(ngModel)]="searchvalue" placeholder="Search Your Movie" class="form-control specialsearch" (change)="onchangemoviename(searchvalue)" />
         
       </div>
+      <div class="col-md-4">
+        
+        <select class="form-control specialsearch" [(ngModel)]="type">
+          <option value="0">Select Type</option>
+          <option value="movie">Movie</option>
+          <option value="Series">Series</option>
+          <option value="Episode">Episode</option>
+        </select>
+          
+          
+        </div>
       <div class="col-md-3">
           <button class="btn btn-primary btn-block paddingtop15" (click)="onchangemoviename(searchvalue)">Search</button>
       </div>
