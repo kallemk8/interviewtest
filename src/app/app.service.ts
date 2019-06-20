@@ -19,4 +19,7 @@ export class AppService {
   getlistbysearchpage(name:string, page:number){
     return this.http.get('http://www.omdbapi.com/?apikey=2d2c9886&s='+name+'&page='+page);
   }
+  getsinglemovie(id:string){
+    return this.http.get('http://www.omdbapi.com/?apikey=2d2c9886&i='+id);
+  }
 }

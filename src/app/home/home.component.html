@@ -22,10 +22,10 @@
         {{errormessage}}
       </div>
       <div class="col-md-3" *ngFor="let movie of data">
-        <div class="movie-items">
+        <a class="movie-items" routerLink="/movies/{{movie.imdbID}}">
             <img src="{{movie.Poster}}" class="maxwidth" />
             <h2 class="movietitle">{{movie.Title}}</h2>
-        </div>
+        </a>
         
       </div>
       <div class="col-md-12">

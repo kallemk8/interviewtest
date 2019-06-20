@@ -18,15 +18,15 @@ export class HomeComponent implements OnInit {
   errormessage:string;
   constructor(private service: AppService){}
   ngOnInit(){
-    this.service.getlist().subscribe(
-      (response: Response) => {
-          var result = response.json();
-          this.totalnumber = result.totalResults;
-          this.numberofpages = result.totalResults/10;
+    // this.service.getlist().subscribe(
+    //   (response: Response) => {
+    //       var result = response.json();
+    //       this.totalnumber = result.totalResults;
+    //       this.numberofpages = result.totalResults/10;
          
-          this.data = result.Search;
-      }, (error) => { console.log(error); }
-    );
+    //       this.data = result.Search;
+    //   }, (error) => { console.log(error); }
+    // );
   }
   onchangemoviename(name, type){
     this.errormessage = "";

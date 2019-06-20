@@ -8,9 +8,9 @@ import { SingleComponent } from './home/single/single.component';
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'Searchmovie', component: HomeComponent },
-    { path: 'movie/:id', component: SingleComponent },
+    { path: 'movies/:id', component: SingleComponent },
     { path: 'blank', component: BlankComponent },
-    { path: '', component:AppComponent },
+    { path: '', component:HomeComponent },
 ];
 
 @NgModule({
