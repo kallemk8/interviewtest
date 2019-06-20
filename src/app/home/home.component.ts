@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from './app.service';
+import { AppService } from './../app.service';
 import { Response } from '@angular/http';
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
+
   title = 'testone';
   data = [];
   totalnumber = 0;
@@ -22,9 +22,7 @@ export class AppComponent implements OnInit {
           var result = response.json();
           this.totalnumber = result.totalResults;
           this.numberofpages = result.totalResults/10;
-          for(var i = 1; i < this.numberofpages; i++){
-              this.pages.push(i);
-          }
+         
           this.data = result.Search;
       }, (error) => { console.log(error); }
     );
@@ -69,4 +67,5 @@ export class AppComponent implements OnInit {
       }, (error) => { console.log(error); }
     );
   }
+
 }

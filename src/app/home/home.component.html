@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <input type="text" [(ngModel)]="searchvalue" placeholder="Search Your Movie" class="form-control specialsearch" (change)="onchangemoviename(searchvalue)" />
+        
+      </div>
+      <div class="col-md-3">
+          <button class="btn btn-primary btn-block paddingtop15" (click)="onchangemoviename(searchvalue)">Search</button>
+      </div>
+      <div class="col-md-12">
+        {{errormessage}}
+      </div>
+      <div class="col-md-3" *ngFor="let movie of data">
+        <div class="movie-items">
+            <img src="{{movie.Poster}}" class="maxwidth" />
+            <h2 class="movietitle">{{movie.Title}}</h2>
+        </div>
+        
+      </div>
+      <div class="col-md-12">
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+              <li class="page-item" *ngFor="let number of pages"><span class="page-link" (click)="onchangepagenumber(number, searchvalue)">{{number}}</span></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
